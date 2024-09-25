@@ -1,0 +1,21 @@
+<div class="container m-3">
+    <div class="row  m-auto align-items-center">
+        <div class="col-5">
+            <div class="p-2" *ngIf="event">
+                <div class="mb-2"><img [src]="event.image" alt="Event Image" class="img-fluid"></div>
+                <div class="ml-2">
+                    <h2>{{ event.name }}</h2>
+                    <p><strong>Date:</strong>{{calulateDate(event.date)}}</p>
+                    <p><strong>Time:</strong>{{calulateTime(event.date)}}</p>
+                    <p><strong>Description:</strong> {{ event.description }}</p>
+                    <p><strong>Location:</strong> {{ event.location }}</p>
+                    <p><strong>Category:</strong> {{ event.category }}</p>
+                </div>
+               
+            </div>
+        </div>
+        <div class="col-5">
+                <app-ticket-booking></app-ticket-booking>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container m-3">
+    <div class="user-profile">
+        <h2>User Profile</h2>
+        <div>
+            <h3>Welcome, {{ userObject.username }}!</h3>
+            <h4>Your Booked Events:</h4>
+            <div class="p-2" *ngIf="bookedEvents.length > 0;">
+
+                <div *ngFor="let bookedEvent of bookedEvents">
+                    <div class="mb-2"><img [src]="bookedEvent.eventdto.image" alt="Event Image" class="img-fluid"></div>
+                    <h3>Name: {{ bookedEvent.eventdto.name }} ||
+                        Location: {{ bookedEvent.eventdto.location }}|| Date: {{ bookedEvent.eventdto.date }}</h3>
+                        <h3>Tickets Booked: {{ bookedEvent.no_of_tickets }}</h3>
+                        <p>Total Price: {{ bookedEvent.ticketCost }}</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
